@@ -1,0 +1,24 @@
+{
+  "@context": ["https://schema.org", {"awap": "https://awap.dev/vocab#"}],
+  "@type": "CreativeWork",
+  "name": "Hacking Hemingway",
+  "author": {"@type": "Person", "name": "Rais Busom"},
+  "dateCreated": "2026-05-30T18:42:11Z",
+  "awap:hasScore": 87,
+  "awap:scoreBreakdown": {
+    "premise": {"points": 100, "presence": 1, "revisionRatio": 1.0},
+    "synopsis": {"points": 85, "presence": 1, "revisionRatio": 1.0},
+    "bible": {"points": 75, "presence": 1, "revisionRatio": 1.0},
+    "outline": {"points": 60, "presence": 1, "revisionRatio": 1.0},
+    "style_instructions": {"points": 40, "presence": 1, "revisionRatio": 1.0},
+    "human_revision": {"points": 25, "presence": 1, "revisionRatio": 0.78},
+    "ai_draft": {"points": 5, "presence": 1, "revisionRatio": 0.78},
+    "conversationalModifier": 1.04
+  },
+  "awap:aiModels": ["claude-sonnet-4-6", "claude-opus-4-8"],
+  "awap:manuscriptHash": "sha256:9f2c4a1e8b7d3c5f6a0e1d2b4c8f7a3e5d9b1c0a2f4e6d8b7a5c3e1f0d9b8a7c",
+  "awap:logHash": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+  "awap:certHash": "3f9a7c1e5b2d8f04",
+  "awap:verifyUrl": "https://awap-verify.rais-busom.workers.dev/verify/3f9a7c1e5b2d8f04",
+  "awap:integrity": "sha256:EXAMPLE0000000000000000000000000000000000000000000000000000000"
+}
