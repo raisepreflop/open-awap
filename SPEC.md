@@ -1,6 +1,6 @@
-# AWAP Specification v1.0
+# Open AWAP — Specification v1.0
 
-**Augmented Writing Audit Protocol** · Rais Busom · June 2026
+**Augmented Writing Audit Protocol (AWAP)** · Rais Busom · June 2026
 Spec license: CC BY 4.0 · Status: stable
 
 This document specifies (1) the event model for recording an AI-assisted writing
@@ -193,5 +193,5 @@ verification procedures of §5.
 
 ---
 
-© 2026 Rais Busom · CC BY 4.0. Cite as: *Busom, R. — AWAP: Augmented Writing
+© 2026 Rais Busom · CC BY 4.0. Cite as: *Busom, R. — Open AWAP: Augmented Writing
 Audit Protocol, v1.0 (2026).*
