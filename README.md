@@ -35,6 +35,15 @@ build itself, session by session.
 
 ## How the HAS is computed
 
+**In plain terms:** the score doesn't count who typed more words — it counts who did
+the *thinking*. Coming up with the premise, the outline, the world, the style is worth
+far more than the sentences an AI drafted from them, because that's where the actual
+authorship happens. A human premise is worth 20× an AI-drafted page. If you later revise
+and rework what the AI wrote, that revision earns credit too — an untouched AI draft
+scores low; the same draft heavily rewritten by the author scores much higher. A small
+back-and-forth conversation nudges the score slightly, but it can never flip the result:
+what you actually *conceived and shaped* is what decides it.
+
 The score has a **documentary core** — what kind of document exists at each level of
 intellectual authorship — modulated by a bounded **conversational axis**.
 
