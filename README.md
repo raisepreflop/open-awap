@@ -33,6 +33,50 @@ The audit trail is *process evidence* — the same class of documentation the U.
 Copyright Office asks for when registering AI-assisted works. AWAP makes that dossier
 build itself, session by session.
 
+## How the HAS is computed
+
+The score has a **documentary core** — what kind of document exists at each level of
+intellectual authorship — modulated by a bounded **conversational axis**.
+
+**1. Document levels.** `document_type` classifies the *intellectual layer* a document
+belongs to. The scale encodes the protocol's thesis: **authorship is conceiving the
+work, not typing the words** — a human-written premise weighs 20× an AI-generated draft,
+token-for-token.
+
+| Level | `document_type` | Points |
+|---|---|---|
+| 1 | `premise` | 100 |
+| 2 | `synopsis` | 85 |
+| 3 | `bible` (project/world bible) | 75 |
+| 4 | `outline` | 60 |
+| 5 | `style_instructions` | 40 |
+| 6 | (human revision of AI text) | 25 |
+| 7 | `draft` (AI-generated text) | 5 |
+
+**2. Documentary HAS.**
+
+```
+HAS_doc = Σ (points_level × presence_level × revision_ratio_level) / max_possible × 100
+```
+
+`presence` is whether the project has a human-authored document at that level;
+`revision_ratio` is, for AI-generated layers, the share of AI tokens the human
+subsequently revised (1 for purely human levels).
+
+**3. Conversational modifier (±10%, bounded).** `HAS_doc` is scaled by how *directive*
+the human was versus how autonomous the AI was — the documentary core always dominates:
+
+| Human turn | `directive_weight` |
+|---|---|
+| Empty or trivial ("ok", "continue", "thanks") | 0.1 |
+| Very short (< 12 characters) | 0.2 |
+| Substantive (decision, correction, direction) | 1.0 |
+
+**4. Interpretation bands** (informative): 80–100 dominant human authorship ·
+50–79 genuine co-authorship · 20–49 AI-dominant · 0–19 mostly AI.
+
+Full formulas, edge cases and the event schema: [`SPEC.md §3`](SPEC.md#3-human-authorship-score-has-20).
+
 ## What this repository contains
 
 | File | Contents |
