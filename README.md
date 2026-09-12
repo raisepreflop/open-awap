@@ -187,11 +187,11 @@ to a v2.0 score and must not be presented as one.
 
 ## Status
 
-v2.0 — stable. The model, the two tracks, the score and the certificate document are implemented
-in the reference implementation and ship with its next release. Three parts are specified and
-**not yet implemented anywhere**: transformation depth (§4.6), the JSON-LD credential (§8.4) and
-the public anchoring of the certificate hash (§8.3) — which is why certificates issued today are
-marked provisional, as §8.3 requires. Feedback and implementation reports: open an issue.
+v2.0 — stable. Implemented in the reference implementation: the model, the two tracks, the score,
+the certificate document, transformation depth (§4.6) and the public anchoring of the certificate
+hash (§8.3). One part is specified and **not yet implemented anywhere**: the JSON-LD credential
+(§8.4). Certificates stay marked provisional until they are anchored, as §8.3 requires. Feedback
+and implementation reports: open an issue.
 
 ---
 
