@@ -195,6 +195,12 @@ chapters must be visible, not averaged away.
 
 Conventional boundary at 50 on both axes.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="examples/quadrants-dark.svg">
+  <img src="examples/quadrants-light.svg" width="780"
+       alt="The quadrant plane. X axis: coverage of the record with its six anchors. Y axis: authorship in what was observed. Dashed boundary at 50 on both axes marks Q2 top left, Q1 top right, Q3 bottom left and Q4 bottom right, with an example point at coverage 20, score 68, band 60-69, inside Q2.">
+</picture>
+
 | Quadrant | Position | Name | Semantics |
 |---|---|---|---|
 | Q1 | X high, Y high | Verified authorship | The only position that admits the full claim |

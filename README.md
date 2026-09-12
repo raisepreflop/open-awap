@@ -62,6 +62,12 @@ Origin track: without that rule, the Transformation track would be a laundering 
 Conventional boundary at 50 on both axes. A work at 51 and a work at 49 are not different kinds
 of thing; show the point and its band, never the line as if it separated natural categories.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="examples/quadrants-dark.svg">
+  <img src="examples/quadrants-light.svg" width="780"
+       alt="The quadrant plane. X axis: coverage of the record, fixed at entry, with its six anchors (0 file, 20 manuscript, 50 partial draft, 75 outline, 85 bible, 100 premise). Y axis: authorship in what was observed, HAS on the origin track and MAS on transformation. Dashed boundary at 50 on both axes marks Q2 accredited transformation (top left), Q1 verified authorship (top right), Q3 unaccredited (bottom left) and Q4 documented generation (bottom right). An example point sits at coverage 20 with a score of 68 and its band 60-69, inside Q2.">
+</picture>
+
 | | Y high | Y low |
 |---|---|---|
 | **X high** | **Q1 · Verified authorship** — the only position that admits the full claim | **Q4 · Documented generation** — a recorded process that shows little human authorship |
@@ -135,6 +141,7 @@ hedged; a single percentage of humanity; or a comparison of scores across quadra
 | [`SPEC.md`](SPEC.md) | The protocol: entry points, tracks, event model, score, quadrants, certificate, verification, conformance |
 | [`examples/certificate.jsonld`](examples/certificate.jsonld) | A complete sample JSON-LD credential |
 | [`examples/verify-offline.md`](examples/verify-offline.md) | Step-by-step offline verification |
+| [`examples/quadrants-light.svg`](examples/quadrants-light.svg) · [`dark`](examples/quadrants-dark.svg) | The quadrant plane, and [the script that draws it](examples/make-quadrants.py) |
 | [`legacy/SPEC-v1.0.md`](legacy/SPEC-v1.0.md) | v1.0, superseded, kept for certificates issued under it |
 
 ## What this repository does NOT contain

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 580" width="780" height="580" font-family="ui-sans-serif, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="The four quadrants of Open AWAP 2.0: coverage of the record on the X axis, authorship in what was observed on the Y axis, boundary at 50 on both axes.">
+<rect width="780" height="580" fill="#0d1117"/>
+<text x="116" y="38" font-size="17" font-weight="600" fill="#e6edf3">The four quadrants</text>
+<text x="116" y="58" font-size="12.5" fill="#9198a1">Two measures over different windows. They are never summed, averaged or reduced to one number.</text>
+<rect x="116.0" y="96.0" width="298.0" height="183.0" fill="#161b22" stroke="#3d444d" stroke-width="1"/>
+<rect x="414.0" y="96.0" width="298.0" height="183.0" fill="#161b22" stroke="#3d444d" stroke-width="1"/>
+<rect x="116.0" y="279.0" width="298.0" height="183.0" fill="#161b22" stroke="#3d444d" stroke-width="1"/>
+<rect x="414.0" y="279.0" width="298.0" height="183.0" fill="#161b22" stroke="#3d444d" stroke-width="1"/>
+<line x1="414.0" y1="462.0" x2="414.0" y2="96.0" stroke="#3d444d" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="116.0" y1="279.0" x2="712.0" y2="279.0" stroke="#3d444d" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="265.0" y="122.0" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="middle">Q2</text>
+<text x="265.0" y="141.0" font-size="12.5" font-weight="600" fill="#e6edf3" text-anchor="middle">Accredited transformation</text>
+<text x="265.0" y="159.0" font-size="11" fill="#9198a1" text-anchor="middle">documented human work</text>
+<text x="265.0" y="174.0" font-size="11" fill="#9198a1" text-anchor="middle">on an unobserved base</text>
+<text x="563.0" y="122.0" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="middle">Q1</text>
+<text x="563.0" y="141.0" font-size="12.5" font-weight="600" fill="#e6edf3" text-anchor="middle">Verified authorship</text>
+<text x="563.0" y="159.0" font-size="11" fill="#9198a1" text-anchor="middle">the only position that admits</text>
+<text x="563.0" y="174.0" font-size="11" fill="#9198a1" text-anchor="middle">the full claim</text>
+<text x="265.0" y="305.0" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="middle">Q3</text>
+<text x="265.0" y="324.0" font-size="12.5" font-weight="600" fill="#e6edf3" text-anchor="middle">Unaccredited</text>
+<text x="265.0" y="342.0" font-size="11" fill="#9198a1" text-anchor="middle">sealed and scanned only:</text>
+<text x="265.0" y="357.0" font-size="11" fill="#9198a1" text-anchor="middle">no score</text>
+<text x="563.0" y="305.0" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="middle">Q4</text>
+<text x="563.0" y="324.0" font-size="12.5" font-weight="600" fill="#e6edf3" text-anchor="middle">Documented generation</text>
+<text x="563.0" y="342.0" font-size="11" fill="#9198a1" text-anchor="middle">a recorded process showing</text>
+<text x="563.0" y="357.0" font-size="11" fill="#9198a1" text-anchor="middle">little human authorship</text>
+<line x1="116" y1="462" x2="712" y2="462" stroke="#e6edf3" stroke-width="1.5"/>
+<line x1="116" y1="462" x2="116" y2="96" stroke="#e6edf3" stroke-width="1.5"/>
+<line x1="116.0" y1="462" x2="116.0" y2="468" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="116.0" y="483" font-size="11.5" fill="#e6edf3" text-anchor="middle">0</text>
+<text x="116.0" y="497" font-size="10.5" fill="#9198a1" text-anchor="middle">file</text>
+<line x1="235.2" y1="462" x2="235.2" y2="468" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="235.2" y="483" font-size="11.5" fill="#e6edf3" text-anchor="middle">20</text>
+<text x="235.2" y="497" font-size="10.5" fill="#9198a1" text-anchor="middle">manuscript</text>
+<line x1="414.0" y1="462" x2="414.0" y2="468" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="414.0" y="483" font-size="11.5" fill="#e6edf3" text-anchor="middle">50</text>
+<text x="414.0" y="497" font-size="10.5" fill="#9198a1" text-anchor="middle">partial draft</text>
+<line x1="563.0" y1="462" x2="563.0" y2="468" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="563.0" y="483" font-size="11.5" fill="#e6edf3" text-anchor="middle">75</text>
+<text x="563.0" y="497" font-size="10.5" fill="#9198a1" text-anchor="middle">outline</text>
+<line x1="622.6" y1="462" x2="622.6" y2="468" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="622.6" y="483" font-size="11.5" fill="#e6edf3" text-anchor="middle">85</text>
+<text x="622.6" y="497" font-size="10.5" fill="#9198a1" text-anchor="middle">bible</text>
+<line x1="712.0" y1="462" x2="712.0" y2="468" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="712.0" y="483" font-size="11.5" fill="#e6edf3" text-anchor="middle">100</text>
+<text x="712.0" y="497" font-size="10.5" fill="#9198a1" text-anchor="middle">premise</text>
+<text x="414.0" y="522" font-size="12.5" font-weight="600" fill="#e6edf3" text-anchor="middle">Coverage of the record  ·  X axis  ·  fixed at entry, never recomputed</text>
+<line x1="110" y1="462.0" x2="116" y2="462.0" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="104" y="466.0" font-size="11.5" fill="#e6edf3" text-anchor="end">0</text>
+<line x1="110" y1="279.0" x2="116" y2="279.0" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="104" y="283.0" font-size="11.5" fill="#e6edf3" text-anchor="end">50</text>
+<line x1="110" y1="96.0" x2="116" y2="96.0" stroke="#e6edf3" stroke-width="1.5"/>
+<text x="104" y="100.0" font-size="11.5" fill="#e6edf3" text-anchor="end">100</text>
+<text transform="translate(64 279.0) rotate(-90)" font-size="12.5" font-weight="600" fill="#e6edf3" text-anchor="middle">Authorship in what was observed  ·  Y axis</text>
+<text transform="translate(80 279.0) rotate(-90)" font-size="11" fill="#9198a1" text-anchor="middle">HAS on the origin track, MAS on transformation</text>
+<rect x="209.2" y="209.5" width="52" height="32.9" fill="#3b2f0f" stroke="#d4a72c" stroke-width="1"/>
+<circle cx="235.2" cy="213.1" r="5.5" fill="#d4a72c"/>
+<text x="269.2" y="214.1" font-size="11.5" font-weight="600" fill="#e6edf3">68 · band 60-69</text>
+<text x="209.2" y="257.4" font-size="10.5" fill="#9198a1">example: entered with a finished manuscript</text>
+<text x="116" y="550" font-size="11" fill="#9198a1">The boundary at 50 is conventional: a work at 51 and a work at 49 are not different in kind.</text>
+<text x="116" y="566" font-size="11" fill="#9198a1">Show the point and its band, never the line as if it separated natural categories.</text>
+</svg>
