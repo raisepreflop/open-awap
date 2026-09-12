@@ -1,4 +1,4 @@
-# Offline verification
+# Open AWAP 2.0 — Offline verification
 
 No network, no account, no vendor. Everything below runs against the JSON-LD credential
 ([`certificate.jsonld`](certificate.jsonld)) and, optionally, a sealed version of the manuscript.

@@ -1,4 +1,4 @@
-# License
+# Open AWAP 2.0 — License
 
 - **Specification text** (`README.md`, `SPEC.md`, `examples/verify-offline.md`):
   © 2026 Rais Busom, licensed under

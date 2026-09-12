@@ -1,4 +1,4 @@
-# Open AWAP — Specification v2.0
+# Open AWAP 2.0 — Specification
 
 **Augmented Writing Audit Protocol** · Rais Busom · September 2026 · CC BY 4.0
 
@@ -456,5 +456,5 @@ section 5 of the certificate instead of leaving it blank.
 
 ---
 
-© 2026 Rais Busom · CC BY 4.0. Cite as: *Busom, R. — Open AWAP: Augmented Writing Audit Protocol,
-v2.0 (2026).*
+© 2026 Rais Busom · CC BY 4.0. Cite as: *Busom, R. — Open AWAP 2.0: Augmented Writing Audit Protocol
+(2026).*

@@ -1,4 +1,4 @@
-# Open AWAP
+# Open AWAP 2.0
 
 **The open specification of the Augmented Writing Audit Protocol (AWAP) — process-evidence of
 human authorship in AI-assisted writing.**
