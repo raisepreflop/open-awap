@@ -1,49 +1,61 @@
-# Verifying an AWAP credential offline
+# Offline verification
 
-No network, no account, no vendor. You need the `certificate.jsonld` file and,
-optionally, the final manuscript.
+No network, no account, no vendor. Everything below runs against the JSON-LD credential
+([`certificate.jsonld`](certificate.jsonld)) and, optionally, a sealed version of the manuscript.
 
-## 1. Integrity of the credential (Node.js)
+## 1. Is the credential untampered?
 
 ```js
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+const sha256 = (s) => "sha256:" + createHash("sha256").update(s).digest("hex");
 
-const credential = JSON.parse(readFileSync("certificate.jsonld", "utf8"));
+const credential = JSON.parse(await fs.readFile("certificate.jsonld", "utf8"));
 const { "awap:integrity": stored, ...body } = credential;
-const recomputed = "sha256:" +
-  createHash("sha256").update(JSON.stringify(body)).digest("hex");
-
-console.log(recomputed === stored ? "UNTAMPERED ✓" : "TAMPERED ✗");
+console.log(sha256(JSON.stringify(body)) === stored);   // true = untampered
 ```
 
-The same in Python:
+## 2. Is this credential about *this* file?
 
-```python
-import hashlib, json
-
-cred = json.load(open("certificate.jsonld"))
-stored = cred.pop("awap:integrity")
-recomputed = "sha256:" + hashlib.sha256(
-    json.dumps(cred, separators=(",", ":"), ensure_ascii=False).encode()
-).hexdigest()
-print("UNTAMPERED" if recomputed == stored else "TAMPERED")
-```
-
-> Note: integrity is computed over the canonical serialization produced by the
-> signer. Implementations MUST document their canonicalization (key order,
-> separators) so independent verifiers can reproduce it.
-
-## 2. Binding to the manuscript (optional)
-
-If you hold the final manuscript file, recompute its hash and compare with
-`awap:manuscriptHash`:
+Hash the **bytes** of the file, not its extracted text, and look for the result in
+`awap:versions`:
 
 ```bash
-shasum -a 256 manuscript.docx
+shasum -a 256 la-casa-v1.docx      # → compare with awap:versions[].sha256
 ```
 
-## 3. Public cross-check (optional, online)
+A match binds the credential to that exact file. No match means the credential is about a
+different state of the work — which is a fact about the file, not necessarily a forgery: a work
+has as many sealed versions as it has sealings.
 
-Open `awap:verifyUrl` (or scan the QR on the certificate document) and compare
-title, author, HAS and hashes with the credential in hand.
+## 3. What does it actually claim?
+
+Read these five fields together, in this order, and refuse to read any of them alone:
+
+| Field | Question it answers |
+|---|---|
+| `awap:coverage` | From what point in the life of the work does a record exist? |
+| `awap:track` | `transformation` means **the origin was never observed** |
+| `awap:score` | Authorship in what *was* observed — `value` exact, `band` for its precision |
+| `awap:score.excluded` | Which components had no data and were left out |
+| `awap:quadrant` | The pair, read as a position |
+
+`coverage` and `score.value` MUST NOT be summed or averaged (SPEC §6.1). A credential that
+carries a combined figure is not AWAP 2.0 conformant, whatever it is called.
+
+## 4. Is it verifiable by a third party yet?
+
+```js
+if (credential["awap:provisional"]) {
+  // Not anchored in any public registry: nobody can check it from outside.
+  // The local record signature only detects hand edits that did not recompute it.
+}
+```
+
+## 5. What it does not tell you
+
+- Nothing about the origin of text predating `awap:entryTs`.
+- Nothing derived from a detector: there is none in the protocol.
+- `awap:baseline.declarationOptions` is the **author's declaration**, recorded and unverified
+  (`declarationVerified` is always `false`).
+- `provenanceScan` documents declarations found inside the file. Finding no marks never means the
+  text is human.

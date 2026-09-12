@@ -1,24 +1,67 @@
 {
   "@context": ["https://schema.org", {"awap": "https://awap.dev/vocab#"}],
   "@type": "CreativeWork",
-  "name": "Hacking Hemingway",
+  "name": "La casa de las lluvias",
   "author": {"@type": "Person", "name": "Rais Busom"},
-  "dateCreated": "2026-05-30T18:42:11Z",
-  "awap:hasScore": 87,
-  "awap:scoreBreakdown": {
-    "premise": {"points": 100, "presence": 1, "revisionRatio": 1.0},
-    "synopsis": {"points": 85, "presence": 1, "revisionRatio": 1.0},
-    "bible": {"points": 75, "presence": 1, "revisionRatio": 1.0},
-    "outline": {"points": 60, "presence": 1, "revisionRatio": 1.0},
-    "style_instructions": {"points": 40, "presence": 1, "revisionRatio": 1.0},
-    "human_revision": {"points": 25, "presence": 1, "revisionRatio": 0.78},
-    "ai_draft": {"points": 5, "presence": 1, "revisionRatio": 0.78},
-    "conversationalModifier": 1.04
+  "dateCreated": "2026-09-12T10:26:00Z",
+  "awap:specVersion": "2.0",
+  "awap:track": "transformation",
+  "awap:entryPoint": "manuscript",
+  "awap:entryTs": "2026-09-11T09:14:03Z",
+  "awap:coverage": 20,
+  "awap:score": {
+    "name": "MAS",
+    "value": 68,
+    "band": "60-69",
+    "hasVersion": "2.1",
+    "weights": {
+      "pure_human_text": 5,
+      "nonliteral_decisions": 4,
+      "subsequent_intervention": 3,
+      "documentary_precedence": 2,
+      "selection_and_rejection": 2,
+      "direction": 1,
+      "temporal_continuity": 1
+    },
+    "components": {
+      "pure_human_text": 0.99,
+      "subsequent_intervention": 0.67,
+      "selection_and_rejection": 0.4,
+      "direction": 0.3,
+      "temporal_continuity": 0.14
+    },
+    "excluded": ["nonliteral_decisions", "documentary_precedence"]
   },
-  "awap:aiModels": ["claude-sonnet-4-6", "claude-opus-4-8"],
-  "awap:manuscriptHash": "sha256:9f2c4a1e8b7d3c5f6a0e1d2b4c8f7a3e5d9b1c0a2f4e6d8b7a5c3e1f0d9b8a7c",
-  "awap:logHash": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
-  "awap:certHash": "3f9a7c1e5b2d8f04",
-  "awap:verifyUrl": "https://awap-verify.rais-busom.workers.dev/verify/3f9a7c1e5b2d8f04",
-  "awap:integrity": "sha256:EXAMPLE0000000000000000000000000000000000000000000000000000000"
+  "awap:quadrant": {"id": "Q2", "name": "Accredited transformation"},
+  "awap:window": {
+    "from": "2026-09-11T09:14:03Z",
+    "to": "2026-09-12T10:26:00Z",
+    "sessions": 1,
+    "days": 1,
+    "generations": 5,
+    "decisions": {"decided": 5, "accepted": 1, "edited": 2, "discarded": 2}
+  },
+  "awap:baseline": {
+    "versionId": "V0",
+    "sha256": "sha256:3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a",
+    "words": 84210,
+    "declarationHash": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+    "declarationOptions": ["author", "ai_assisted"],
+    "declarationVerified": false,
+    "provenanceScan": {
+      "available": true,
+      "invisibleCharacters": 2,
+      "homoglyphs": 0,
+      "textWatermark": {"detected": null, "reason": "no public detector"}
+    }
+  },
+  "awap:versions": [
+    {"id": "V0", "ts": "2026-09-11T09:14:03Z", "sha256": "sha256:3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a3f9a", "words": 84210},
+    {"id": "V1", "ts": "2026-09-12T10:02:41Z", "sha256": "sha256:7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e7c1e", "words": 85003}
+  ],
+  "awap:aiModels": ["anthropic/claude-sonnet-5"],
+  "awap:recordSignature": "sha256:d40158593cb0cfaaf8d153816f2120d975fd8803dde1441a13027fdc1b6ed131",
+  "awap:certHash": "sha256:f4164f580cd672c706b4dea087e66afe220861e29e6e946228ede7076de84458",
+  "awap:provisional": true,
+  "awap:integrity": "sha256:EXAMPLE0000000000000000000000000000000000000000000000000000000000"
 }
