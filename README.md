@@ -32,10 +32,11 @@ for reporting, from that log alone, **two numbers that are never combined**:
 
 - **Coverage (X axis)** — from which point in the life of the work a record exists. It is fixed
   once, when the work enters the registry, and never changes.
-- **Authorship in what was observed (Y axis)** — the **HAS** (Human Authorship Score), computed
+- **Authorship in what was observed (Y axis)** — the **HAS** (Human Authorship Score) on the Origin track and the **MAS** (Manuscript Authoring
+  Scoring) on the Transformation track, computed
   over the recorded window only, with the same formula in both tracks.
 
-A work that enters with a finished manuscript can still earn a high Y: the protocol documents the
+A work that enters with a finished manuscript can still earn a high MAS: the protocol documents the
 rewriting. What it can never earn is a claim about its origin, because nobody watched it being
 written. That distinction is the whole protocol.
 
@@ -71,13 +72,13 @@ of thing; show the point and its band, never the line as if it separated natural
 | | Y high | Y low |
 |---|---|---|
 | **X high** | **Q1 · Verified authorship** — the only position that admits the full claim | **Q4 · Documented generation** — a recorded process that shows little human authorship |
-| **X low** | **Q2 · Accredited transformation** — documented human work on an unobserved base | **Q3 · Unaccredited** — sealed and scanned only; no score |
+| **X low** | **Q2 · Accredited transformation** — documented human work on an unobserved base | **Q3 · Unaccredited** — sealed and scanned only; no HAS or MAS |
 
 Q4 is not the failure quadrant: it is what makes the instrument serious, and it has its own
 market — anyone who must declare accurately to a platform or a publisher needs exactly this
 proof.
 
-## How the score is computed
+## How HAS and MAS are computed
 
 Everything is derived from events; nothing from a scan of the text. Seven components, published
 weights, versioned (`has_version`). Weights are product policy, not mathematics: publish them,
@@ -101,7 +102,7 @@ own they do not establish authorship.
 
 - A component with no data is **excluded and renormalised** — never imputed. The certificate says
   which components took part and which did not.
-- With no generation events in the window there is **no score at all** (Q3). A work nobody watched
+- With no generation events in the window there is **no HAS or MAS at all** (Q3). A work nobody watched
   being written cannot score 100 for "no AI text conserved".
 - The result is reported as an **exact value and a band of 10**. The exact number is what people
   ask for; the band is what says how much precision the number really has.
@@ -116,7 +117,7 @@ any explanation.
 2. **Origin** — Origin track: the documentary chain. Transformation track: `[NOT RECORDED]`, the
    entry date, and the author's declaration
 3. **Recorded process** — window, sessions, events, version chain
-4. **Position** — coverage · score (exact value and band) · quadrant · `has_version`
+4. **Position** — coverage · HAS or MAS (exact value and band) · quadrant · `has_version`
 5. **Transformation** — Transformation track only
 6. **Declared and recorded AI use**
 7. **What this certificate does not accredit** — mandatory, fixed text
@@ -126,7 +127,7 @@ Section 7 is not a disclaimer bolted on by a lawyer; it is the reason the rest c
 
 > This certificate does not accredit the origin of any text predating the date of entry into the
 > registry. It contains no AI-text detector and does not rely on one. It does not claim the work
-> is "human", "AI-free", or any single percentage of humanity. Coverage and the score are
+> is "human", "AI-free", or any single percentage of humanity. Coverage and the score (HAS or MAS) are
 > different measures over different windows: they are not summed, and they are not compared
 > across quadrants. AWAP does not prevent fraud: it makes the certificate state only true things.
 

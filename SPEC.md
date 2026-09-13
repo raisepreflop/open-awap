@@ -15,7 +15,7 @@ v2.0 replaces v1.0 in full and is not backwards compatible
    derives from an analysis of the finished text.
 2. **Origin is not recoverable after the fact.** No detector, watermark reader or stylometric
    distance establishes who wrote a text that was not observed being written.
-3. **Two measures, never one.** Coverage and the score answer different questions over different
+3. **Two measures, never one.** Coverage and the score (HAS or MAS) answer different questions over different
    windows. Combining them destroys both (§7).
 4. **What the author declares is recorded as a declaration**, marked as unverified, and never
    promoted to a fact.
@@ -34,7 +34,7 @@ v2.0 replaces v1.0 in full and is not backwards compatible
 | Event | An append-only record of something that happened (§2.3). |
 | Version | A sealed state of the manuscript, identified by the hash of its bytes. |
 | Declaration | The author's statement about the origin of a pre-existing base. |
-| Position | The pair (coverage, score) with its quadrant — never a single figure. |
+| Position | The pair (coverage, HAS or MAS) with its quadrant — never a single figure. |
 
 ### 2.2 Critical fields of the work
 
@@ -122,19 +122,19 @@ denominator** — the final text — because those add to 100% by construction:
 
 ---
 
-## 4. The Y axis: score over the observed window
+## 4. The Y axis: HAS and MAS over the observed window
 
 ### 4.1 Definition
 
-The score is computed **with the same formula on both tracks**, over the recorded window only —
+The score — **HAS** on the Origin track, **MAS** on the Transformation track — is computed **with the same formula on both tracks**, over the recorded window only —
 from `entry_ts` to issuance. One scoring engine, one window parameter. That is why the two axes
 are orthogonal and why they can be shown together although they can never be averaged.
 
 ### 4.2 Name of the axis
 
 On the Origin track the axis is the **HAS** (Human Authorship Score). On the Transformation track
-the same number MUST be reported under a distinct name — the reference implementation uses **MAS**
-(Manuscript Authoring Scoring) — because a figure computed over a work with no recorded origin
+the same number MUST be reported under its own name, the **MAS** (Manuscript Authoring
+Scoring), because a figure computed over a work with no recorded origin
 must not be comparable, by name, with one that has it. Same formula, same weights, different
 name.
 
@@ -161,7 +161,7 @@ All derived from events, none from the text itself.
    over a work nobody watched being written would certify what was not observed (§1.1).
 3. AI used **during rewriting** on the Transformation track is recorded and penalised exactly as
    on the Origin track. This is the most important rule in the specification.
-4. The score MUST be reported as an **exact integer 0–100 together with its band of 10**. Neither
+4. The HAS or MAS MUST be reported as an **exact integer 0–100 together with its band of 10**. Neither
    alone: the exact value is what a registrar or a platform asks for, and the band is the honest
    statement of its precision.
 
@@ -205,10 +205,10 @@ Conventional boundary at 50 on both axes.
 |---|---|---|---|
 | Q1 | X high, Y high | Verified authorship | The only position that admits the full claim |
 | Q2 | X low, Y high | Accredited transformation | Documented human work on an unobserved base |
-| Q3 | X low, Y low | Unaccredited | Sealed and scanned only. No score |
+| Q3 | X low, Y low | Unaccredited | Sealed and scanned only. No HAS or MAS |
 | Q4 | X high, Y low | Documented generation | A recorded process showing little human authorship |
 
-With no score (§4.4.2) the position is Q3 regardless of coverage.
+With no HAS or MAS (§4.4.2) the position is Q3 regardless of coverage.
 
 An implementation MUST show the point and its band and MUST NOT present the boundary as if it
 separated natural categories: a work at 51 and a work at 49 are not different in kind.
@@ -248,7 +248,7 @@ on the Transformation track: it stays visibly empty.**
 3. RECORDED PROCESS
      window, sessions, events, version chain
 4. POSITION
-     coverage (anchor) · score (exact value + band) · quadrant · has_version
+     coverage (anchor) · HAS or MAS (exact value + band) · quadrant · has_version
 5. TRANSFORMATION        (Transformation track only: three levels + per-chapter map)
 6. DECLARED AND RECORDED AI USE
 7. WHAT THIS CERTIFICATE DOES NOT ACCREDIT
@@ -263,7 +263,7 @@ Mandatory in every issuance, verbatim:
 >   the registry.
 > - It contains no AI-generated-text detector and does not rely on one.
 > - It does not claim the work is "human", "AI-free", or any single percentage of humanity.
-> - Coverage and the score are different measures over different windows: they are not summed and
+> - Coverage and the score (HAS or MAS) are different measures over different windows: they are not summed and
 >   they are not compared across quadrants.
 > - AWAP does not prevent fraud: it makes the certificate state only true things.
 
@@ -448,7 +448,7 @@ An implementation is **AWAP 2.0 conformant** if it:
    literal caveat, and blocks until the origin declaration is signed, with
    `declaration_verified: false`;
 3. records the events of §2.3 append-only, with the decision `method` reported;
-4. computes the score as §4, excluding and renormalising missing components, issuing **no score**
+4. computes the HAS or MAS as §4, excluding and renormalising missing components, issuing **no score**
    with no generations in the window, and publishing weights and `has_version`;
 5. reports the exact value **and** the band, and never a combined figure (§6.1);
 6. issues the eight sections of §7.1 with section 7 verbatim, the wording of §7.3 subject to §7.4,
